@@ -1,0 +1,18 @@
+@import "../../styles/variables";
+@import "../../styles/keyframes";
+@import "../../styles/mixins";
+
+// todo
+
+.divider {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5vw 0 0 100vw;
+  border-color: transparent transparent transparent
+    map-get($theme-colors, "dark");
+}
+
+.flipped {
+  border-width: 0 0 5vw 100vw;
+}

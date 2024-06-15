@@ -1,0 +1,54 @@
+@import "../../styles/variables";
+@import "../../styles/keyframes";
+@import "../../styles/mixins";
+
+.section {
+  @include section;
+  @include full-height;
+}
+
+.content {
+  @include content;
+
+  flex-basis: 37.5rem;
+}
+
+.headline {
+  @include headline;
+  @include fade-up-animation;
+
+  font-size: 3.75rem;
+}
+
+.copy {
+  @include copy;
+  @include fade-up-animation;
+
+  animation-delay: 0.15s;
+}
+
+.button-wrapper {
+  @include fade-up-animation;
+
+  animation-delay: 0.3s;
+
+  margin-top: 0.75rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.button {
+  @include cta-button;
+
+  margin: 0.5rem;
+}
+
+.social-wrapper {
+  @include fade-up-animation;
+
+  animation-delay: 0.45s;
+
+  margin-top: 1.875rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}

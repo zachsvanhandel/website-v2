@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://v2.zachsvanhandel.me">
-    <img src="./src/assets/images/logo.svg" width="75"/>
+    <img src="./src/icons/logo.svg" width="75"/>
   </a>
 </p>
 
@@ -48,7 +48,7 @@ npm start
 Check out these resources to gain a better understanding of what is going on under the hood:
 
 - [Gatsby](https://www.gatsbyjs.com/)
-- [styled-components](https://styled-components.com/)
+- [Sass](https://sass-lang.com/)
 - [Netlify](https://www.netlify.com/)
 
 ## 📝 License

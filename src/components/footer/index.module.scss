@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+@import "../../styles/keyframes";
+@import "../../styles/mixins";
+
+.footer {
+  @include bg-dark;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 25px;
+}
+
+.social-wrapper {
+  @include fade-in-animation;
+
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.paused {
+  animation-play-state: paused;
+}

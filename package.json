@@ -5,20 +5,20 @@
   "version": "0.1.0",
   "author": "Zach Van Handel <zach@zachsvanhandel.me>",
   "dependencies": {
-    "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^2.26.1",
     "gatsby-plugin-manifest": "^2.6.1",
     "gatsby-plugin-netlify": "^2.10.0",
     "gatsby-plugin-offline": "^3.4.0",
     "gatsby-plugin-react-helmet": "^3.4.0",
     "gatsby-plugin-react-svg": "^3.0.0",
-    "gatsby-plugin-styled-components": "^3.9.0",
+    "gatsby-plugin-sass": "^3.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
+    "react-intersection-observer": "^8.31.0",
     "sanitize.css": "^12.0.1",
-    "styled-components": "^5.2.1"
+    "sass": "^1.32.8"
   },
   "devDependencies": {
     "prettier": "2.2.1"

@@ -1,0 +1,24 @@
+@import "../../styles/variables";
+@import "../../styles/keyframes";
+@import "../../styles/mixins";
+
+.social-link-list {
+  @include unstyled-list;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social-link-list-item {
+  margin: 0.25rem 0.5rem;
+}
+
+.social-link {
+  color: inherit;
+
+  font-size: 0.875rem;
+  font-weight: bold;
+
+  text-decoration: none;
+  text-transform: uppercase;
+}

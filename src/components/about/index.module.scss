@@ -1,0 +1,67 @@
+@import "../../styles/variables";
+@import "../../styles/keyframes";
+@import "../../styles/mixins";
+
+.section {
+  @include section;
+  @include bg-dark;
+}
+
+.content {
+  @include content;
+  @include fade-up-animation;
+
+  margin-top: 60px; // todo
+
+  @include media(map-get($screen-sizes, "lg")) {
+    margin-top: unset;
+  }
+}
+
+.headline {
+  @include headline;
+}
+
+.copy {
+  @include copy;
+}
+
+.graphic {
+  @include graphic;
+}
+
+.circle-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 325px;
+  height: 325px;
+
+  margin: -10px;
+}
+
+// todo: add animation delays
+@for $i from 1 through 25 {
+  .circle-#{$i} {
+    @include fade-in-animation;
+
+    height: 45px; // todo
+    width: 45px; // todo
+
+    border: 2px solid map-get($theme-colors, "light");
+    border-radius: 50%; // todo
+    margin: 10px; // todo
+
+    animation-delay: #{random()}s;
+  }
+}
+
+.filled {
+  background-color: map-get($theme-colors, "light");
+
+  animation-delay: 1.5s;
+}
+
+.paused {
+  animation-play-state: paused;
+}

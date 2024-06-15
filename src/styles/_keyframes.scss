@@ -1,0 +1,39 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0.001;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0.001;
+  }
+
+  25%,
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.001;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0.001;
+    transform: translateY(50px);
+  }
+
+  50% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,63 @@
+@import "../../styles/variables";
+@import "../../styles/keyframes";
+@import "../../styles/mixins";
+
+.section {
+  @include section;
+  @include bg-dark;
+}
+
+.content {
+  @include content;
+  @include fade-up-animation;
+}
+
+.headline {
+  @include headline;
+}
+
+.copy {
+  @include copy;
+}
+
+.graphic {
+  @include graphic;
+
+  margin-top: 60px; // todo
+
+  @include media(map-get($screen-sizes, "lg")) {
+    margin-top: unset;
+  }
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 400px;
+  height: 400px;
+
+  margin: -20px;
+}
+
+// todo: add animation delays
+@for $i from 1 through 16 {
+  .icon-#{$i} {
+    @include fade-in-animation;
+
+    height: 60px; // todo
+    width: 60px; // todo
+
+    margin: 20px; // todo
+
+    animation-delay: #{((($i - 1) % 4) + $i / 4) * 0.075 + ($i) * 0.025}s;
+  }
+}
+
+.paused {
+  animation-play-state: paused;
+}
+
+.link {
+  @include cta-link;
+}

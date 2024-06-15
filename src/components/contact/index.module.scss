@@ -1,0 +1,28 @@
+@import "../../styles/variables";
+@import "../../styles/keyframes";
+@import "../../styles/mixins";
+
+.section {
+  @include section;
+}
+
+.content {
+  @include content;
+  @include fade-up-animation;
+}
+
+.paused {
+  animation-play-state: paused;
+}
+
+.headline {
+  @include headline;
+}
+
+.copy {
+  @include copy;
+}
+
+.link {
+  @include cta-link;
+}

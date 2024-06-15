@@ -1,0 +1,7 @@
+@import "../../styles/variables";
+@import "../../styles/keyframes";
+@import "../../styles/mixins";
+
+.main {
+  @include bg-light;
+}

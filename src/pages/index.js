@@ -1,9 +1,14 @@
 import React, { useState } from "react"
 
+import About from "../components/about"
+import Contact from "../components/contact"
+import Divider from "../components/divider"
+import Experience from "../components/experience"
+import Footer from "../components/footer"
+import Hero from "../components/hero"
 import Layout from "../components/layout"
-import Load from "../components/load"
-import Hero from "../components/sections/hero"
-import SEO from "../components/seo"
+import Loader from "../components/loader"
+import Skills from "../components/skills"
 
 const IndexPage = () => {
   const [loaded, setLoaded] = useState(false)
@@ -13,10 +18,24 @@ const IndexPage = () => {
   }
 
   return (
-    <Layout>
-      <SEO title="Software Engineer" />
-
-      {!loaded ? <Load onLoadComplete={onLoadComplete} /> : <Hero />}
+    <Layout title="Software Engineer">
+      {!loaded ? (
+        <Loader onLoadComplete={onLoadComplete} />
+      ) : (
+        <>
+          <Hero />
+          <Divider />
+          <About />
+          <Divider flipped />
+          <Experience />
+          <Divider />
+          <Skills />
+          <Divider flipped />
+          <Contact />
+          <Divider />
+          <Footer />
+        </>
+      )}
     </Layout>
   )
 }

@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+@import "../../styles/keyframes";
+@import "../../styles/mixins";
+
+.section {
+  @include section;
+  @include full-height;
+}
+
+.content {
+  @include content;
+  @include fade-up-animation;
+}
+
+.headline {
+  @include headline;
+}
+
+.copy {
+  @include copy;
+}
+
+.link {
+  @include cta-link;
+}

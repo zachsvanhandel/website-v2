@@ -12,7 +12,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sass`,
     `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -23,7 +23,7 @@ module.exports = {
         background_color: `#000`,
         theme_color: `#4567ff`,
         display: `minimal-ui`,
-        icon: `src/assets/images/logo.svg`,
+        icon: `src/icons/logo.svg`,
         cache_busting_mode: `none`, // needed for gatsby-plugin-offline: https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/#using-with-gatsby-plugin-offline
       },
     },
@@ -31,6 +31,7 @@ module.exports = {
       resolve: `gatsby-plugin-offline`,
       options: {
         workboxConfig: {
+          // todo: could this be an issue with icons for skills page??
           globPatterns: [`**/*icon*`], // needed for gatsby-plugin-manifest: https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/#using-with-gatsby-plugin-offline
         },
       },
@@ -39,7 +40,10 @@ module.exports = {
       resolve: `gatsby-plugin-react-svg`,
       options: {
         rule: {
-          include: /assets\/images/,
+          include: /icons/,
+          options: {
+            name: `Icon`,
+          },
         },
       },
     },

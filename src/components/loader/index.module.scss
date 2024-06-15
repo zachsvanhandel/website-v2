@@ -1,0 +1,27 @@
+@import "../../styles/variables";
+@import "../../styles/keyframes";
+@import "../../styles/mixins";
+
+.logo-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: inherit;
+  background-color: inherit;
+}
+
+.logo {
+  @include fade-in-out-animation;
+
+  height: 4.625rem;
+  width: 4.625rem;
+}
